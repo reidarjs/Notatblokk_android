@@ -51,12 +51,16 @@ public class EditActivity extends AppCompatActivity {
             notatDao.update(for_lagring);
         }else{
             notatDao.insertNotat(for_lagring);
+            isLoaded=true;
         }
 
         Toast.makeText(this,"Notat lagret",Toast.LENGTH_SHORT).show();
     }
 
     void initViews(){
+
+
+
         editTextTittel=findViewById(R.id.editTextTittel);
         editTextNotat=findViewById(R.id.editTextNotat);
         btnLagre=findViewById(R.id.btnLagre);
